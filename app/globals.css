@@ -18,16 +18,100 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  /* background-color: #04091b; */
+  background-color: #0F0F0F;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.text_animation {
+  height: 3rem;
+  /* margin-top: auto; */
+  overflow: hidden;
+  color: #F2613F;
+  font-weight: 700;
+
+
+  ul {
+    margin-top: -8px;
+    padding: 0;
+    animation: scrollUp 4s infinite;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      list-style: none;
+    }
+  }
+}
+
+.scroll_down {
+  width: 50px;
+  height: 90px;
+  border: 3px solid #333;
+  border-radius: 60px;
+  position: relative;
+
+
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+@keyframes scrollUp {
+
+  15%,
+  25% {
+    transform: translateY(-20%);
+  }
+
+  40%,
+  50% {
+    transform: translateY(-40%);
+  }
+
+  65%,
+  75% {
+    transform: translateY(-60%);
+  }
+
+  90%,
+  100% {
+    transform: translateY(-80%);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
   }
 }
