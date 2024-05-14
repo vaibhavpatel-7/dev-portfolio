@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-import GuyWithLaptop from "../../public/men-with-laptop.jpg"
+// import GuyWithLaptop from "../../svg/men-with-laptop.jpg"
 import Education from "../../svg/education.svg"
 import Location from "../../svg/location.svg"
 import Job from "../../svg/job.svg"
+import GuyWithLaptop from "../../public/guy-with-laptop.jpg"
 import LogoWithTitle from './ui/logo-title'
 
 const About = () => {

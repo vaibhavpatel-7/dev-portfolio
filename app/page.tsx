@@ -2,6 +2,10 @@ import Navbar from "./_components/navbar";
 import Hero from "./_components/hero";
 import About from "./_components/about";
 import Skills from "./_components/skills";
+import WorkExprience from "./_components/work-exprience";
+
+
+// TODO: Animation on scroll (AOS)
 
 export default function Home() {
   return (
@@ -18,7 +22,7 @@ export default function Home() {
         <Skills />
       </section>
       <section id="work-exprience" className="h-screen">
-        Work Exprience
+        <WorkExprience />
       </section>
       <section id="contact-me" className="h-screen">
         Contact Me
