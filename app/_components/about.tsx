@@ -5,14 +5,14 @@ import React from 'react'
 import Education from "../../svg/education.svg"
 import Location from "../../svg/location.svg"
 import Job from "../../svg/job.svg"
-import Nest from "../../svg/nestjs.svg"
+import GuyWithLaptop from "../../public/guy-with-laptop.jpg"
 import LogoWithTitle from './ui/logo-title'
 
 const About = () => {
     return (
         <div className='h-screen flex items-center'>
             <div className='flex flex-1 items-center justify-center' >
-                <Image src={Nest} alt='man with laptop' className='w-2/3 rounded-lg' />
+                <Image src={GuyWithLaptop} alt='man with laptop' className='w-2/3 rounded-lg' />
             </div>
 
             <div className='w-1/2'>

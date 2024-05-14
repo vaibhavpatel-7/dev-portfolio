@@ -34,7 +34,7 @@ const ExprienceCard = ({ data, index }: IProps) => {
                     <p>
                         {data.description}  </p>
                     <h5 className="text-slate-200 text-xl">
-                        <span className="font-semibold">Technologies:</span> <span className="italic text-slate-400">{data.technologies}</span>
+                        <span className="font-semibold">Technologies:</span> <span className="italic text-slate-400">{data.technologies.join(", ")}</span>
                     </h5>
                 </div>
             </div>
