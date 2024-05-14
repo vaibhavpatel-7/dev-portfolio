@@ -1,6 +1,7 @@
-import { BackgroundBeams } from "./_components/ui/background-beams";
 import Navbar from "./_components/navbar";
 import Hero from "./_components/hero";
+import About from "./_components/about";
+import Skills from "./_components/skills";
 
 export default function Home() {
   return (
@@ -11,10 +12,10 @@ export default function Home() {
         <Hero />
       </section>
       <section id="about" className="h-screen ">
-        About Me
+        <About />
       </section>
       <section id="skills" className="h-screen">
-        Skills
+        <Skills />
       </section>
       <section id="work-exprience" className="h-screen">
         Work Exprience
