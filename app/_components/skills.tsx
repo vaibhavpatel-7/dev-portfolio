@@ -3,7 +3,7 @@ import Skill from './ui/skills'
 
 import ReactLogo from "../../svg/react.svg"
 import NextLogo from "../../svg/next.svg"
-import NodeLogo from "../../svg/node.svg"
+import NodeLogo from "../../svg/nodejs.svg"
 import TailwindLogo from "../../svg/tailwindcss.svg"
 import ReduxLogo from "../../svg/redux.svg"
 import WebpackLogo from "../../svg/webpack.svg"
@@ -13,6 +13,7 @@ import ExpressLogo from "../../svg/express.svg"
 import SassLogo from "../../svg/sass.svg"
 import JSLogo from "../../svg/javascript.svg"
 import TSLogo from "../../svg/typescript.svg"
+import RustLogo from "../../svg/rust.svg"
 import AWSLogo from "../../svg/aws.svg"
 import PostgresqlLogo from "../../svg/postgresql.svg"
 
@@ -55,6 +56,7 @@ const Skills = () => {
                         <div className='flex flex-wrap gap-11' >
                             <Skill logo={JSLogo} title='Javascript' />
                             <Skill logo={TSLogo} title='Typescript' />
+                            <Skill logo={RustLogo} title='Rust' />
                         </div>
                     </h1>
                 </div>

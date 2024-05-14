@@ -22,13 +22,6 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  /* background-color: #04091b; */
   background-color: #0F0F0F;
   scroll-behavior: smooth !important;
 }
@@ -39,6 +32,20 @@ body {
   }
 }
 
+.menu-item {
+  h1:after {
+    display: block;
+    content: '';
+    border-bottom: solid 5px #fff;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
+
+
+  h1:hover:after {
+    transform: scaleX(1);
+  }
+}
 .text_animation {
   height: 3rem;
   overflow: hidden;

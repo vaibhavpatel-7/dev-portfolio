@@ -1,18 +1,40 @@
+"use client"
+
+import useUpdateUrlOnScroll from '@/lib/utils/hashChange';
 import Link from 'next/link'
 
+export interface Isection {
+    id: string;
+    title: string;
+}
+
 const Navbar = () => {
+    const sections = [
+        { id: "home", title: "Home" },
+        { id: "about", title: "About" },
+        { id: "skills", title: "Skills" },
+        { id: "work-exprience", title: "Work Exprience" },
+        { id: "contact-me", title: "Contact Me" },
+    ];
+    // const currentSection = useUpdateUrlOnScroll(sections);
+
     return (
-        <nav className='flex justify-between w-full p-6 fixed z-40'>
-            <Link href="/#home">
+        <nav className='flex justify-between w-full p-6 fixed z-40 backdrop-blur-sm border-b-2 border-b-slate-700'>
+            <Link href="#home">
                 <span className='font-bold text-2xl'>Vaibhav Patel</span>
             </Link>
+
             {/* Menu options */}
             <ul className='flex gap-4 text-2xl '>
-                <li><Link href="/#home" className='hover:text-orange-500'>Home</Link></li>
-                <li><Link href="#about" className='hover:text-orange-500'>About</Link></li>
-                <li><Link href="#skills" className='hover:text-orange-500'>Skills</Link></li>
-                <li><Link href="#work-exprience" className='hover:text-orange-500'>Work Exprience</Link></li>
-                <li><Link href="#contact-me" className='hover:text-orange-500'>Contact me</Link></li>
+                {
+                    sections.map((section) => (
+                        <li key={section.id} className=''>
+                            <Link href={`#${section.id}`} className={section.id === "" ? ' font-extrabold menu-item' : 'menu-item'}>
+                                <h1> {section.title}</h1>
+                            </Link>
+                        </li>
+                    ))
+                }
             </ul>
         </nav>
     )
