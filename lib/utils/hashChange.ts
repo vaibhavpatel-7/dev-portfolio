@@ -25,7 +25,7 @@ const useUpdateUrlOnScroll = (sections: Isection[]) => {
         return () => {
             window.removeEventListener('scroll', updateVisibilities)
         }; // Cleanup
-    }, []);
+    }, [sections]);
 
     useEffect(() => {
         // Update URL based on visibility changes (Optional)
