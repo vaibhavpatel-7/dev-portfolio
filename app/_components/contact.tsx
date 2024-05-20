@@ -49,7 +49,7 @@ const Contact = () => {
 
                 {/* links */}
                 <div>
-                    <h4 className='text-xl font-extralight mt-16 md:w-5/12 w-auto'>My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</h4>
+                    <h4 className='text-xl font-extralight mt-16 md:w-5/12 w-auto'>{`My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!`}</h4>
                     <div className='mt-11 flex flex-col gap-5 '>
                         {
                             contactDetails.map(item =>
