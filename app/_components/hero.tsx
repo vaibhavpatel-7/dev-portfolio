@@ -4,22 +4,22 @@ import { Source_Code_Pro } from 'next/font/google'
 import { BackgroundBeams } from './ui/background-beams'
 
 
-const inter = Source_Code_Pro({
+const SourceCodePro = Source_Code_Pro({
     subsets: ['latin'],
     display: 'swap',
 })
 
 const Hero = () => {
     return (
-        <div className='flex flex-col justify-between h-screen'>
+        <div className='flex flex-col justify-between min-h-dvh mb-6'>
             <BackgroundBeams />
             <div className='flex flex-col items-center z-10 justify-center flex-1'>
                 <span className='text-2xl flex gap-3 flex-col'>
-                    <p className={inter.className}>
+                    <p className={SourceCodePro.className}>
                         Hey, This is
                     </p>
 
-                    <h1 className='font-bold text-9xl z-10 tracking-wide'>
+                    <h1 className='font-bold lg:text-9xl text-4xl z-10 tracking-wide'>
                         VAIBHAV PATEL
                     </h1>
 
@@ -28,7 +28,7 @@ const Hero = () => {
                             <ul className='list_animation'>
                                 <li>a Full Stack Developer</li>
                                 <li>a Tech Enthusiast</li>
-                                <li>a Team Player</li>
+                                <li>a Web3 Developer</li>
                                 <li>a Passionate Developer</li>
                                 <li>a Full Stack Developer</li>
                             </ul>
