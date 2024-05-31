@@ -36,11 +36,10 @@ body {
   h1:after {
     display: block;
     content: '';
-    border-bottom: solid 5px #fff;
+    border-bottom: solid 2px #fff;
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
   }
-
 
   h1:hover:after {
     transform: scaleX(1);

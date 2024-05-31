@@ -67,7 +67,7 @@ const Contact = () => {
             </div>
 
             <div>
-                <h5 className='text-3xl flex-1 flex pr-4 justify-end font-extralight mt-16'>Bye, © 2024 Vaibhav Patel.</h5>
+                <h5 className='text-3xl flex-1 flex pr-4 justify-end font-extralight mt-16'>© 2024 Vaibhav Patel.</h5>
             </div>
         </div>
     )

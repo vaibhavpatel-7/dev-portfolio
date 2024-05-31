@@ -20,7 +20,7 @@ import PostgresqlLogo from "../../svg/postgresql.svg"
 
 const Skills = () => {
     return (
-        <div data-aos="slide-up" className='pt-28 pl-14 pr-14 flex flex-col gap-11'>
+        <div data-aos="slide-up" className='px-6 md:pt-28 md:pl-14 md:pr-14 flex flex-col gap-11'>
             <div>
                 <h1 className='text-4xl lg:text-5xl  font-bold'>Skills 💻</h1>
             </div>
