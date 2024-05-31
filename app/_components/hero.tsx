@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Source_Code_Pro } from 'next/font/google'
 
-import { BackgroundBeams } from './ui/background-beams'
+import { SparklesCore } from './ui/sparkels'
 
 
 const SourceCodePro = Source_Code_Pro({
@@ -12,7 +12,17 @@ const SourceCodePro = Source_Code_Pro({
 const Hero = () => {
     return (
         <div className='flex flex-col justify-between min-h-dvh mb-6'>
-            <BackgroundBeams />
+            <div className="w-full absolute inset-0 h-screen">
+                <SparklesCore
+                    id="tsparticlesfullpage"
+                    background="transparent"
+                    minSize={0.6}
+                    maxSize={1.4}
+                    particleDensity={100}
+                    className="w-full h-full"
+                    particleColor="#FFFFFF"
+                />
+            </div>
             <div className='flex flex-col items-center z-10 justify-center flex-1'>
                 <span className='text-2xl flex gap-3 flex-col'>
                     <p className={SourceCodePro.className}>

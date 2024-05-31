@@ -38,7 +38,7 @@ export default function Home() {
       <section id="skills" className="min-h-dvh">
         <Skills />
       </section>
-      <section id="work-exprience" className="min-h-dvh flex flex-col">
+      <section id="work-experience" className="min-h-dvh flex flex-col">
         <WorkExprience />
       </section>
       <section id="certificate" className="min-h-32">

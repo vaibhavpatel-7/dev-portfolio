@@ -15,7 +15,7 @@ const Certificate = () => {
         <div className='bg-[#F8F4EC] min-h-36 flex justify-between p-5'>
             {/* EEE  F8F4EC {F5F7F8} */}
             <h3 className={`lg:text-6xl text-2xl font-bold flex text-black ${MontserratFont.className} `}>
-                Certificates
+                Certification
             </h3>
             <div className='flex'>
                 <div className='lg:size-36 size-24'>
