@@ -6,7 +6,7 @@ import { Source_Code_Pro } from 'next/font/google'
 import Education from "../../svg/education.svg"
 import Location from "../../svg/location.svg"
 import Job from "../../svg/job.svg"
-import GuyWithLaptop from "../opengraph-image.jpg"
+import GuyWithLaptop from "../../svg/opengraph-image.jpg"
 import LogoWithTitle from './ui/logo-title'
 
 const SourceCodePro = Source_Code_Pro({

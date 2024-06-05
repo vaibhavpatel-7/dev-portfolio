@@ -6,7 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export interface ISection {
@@ -36,17 +36,14 @@ function getVisibleSection(sections: ISection[]) {
 }
 
 const Navbar = () => {
-    const sections = [
+    const sections = useMemo(() => [
         { id: "home", title: "Home" },
         { id: "about", title: "About" },
         { id: "skills", title: "Skills" },
         { id: "work-experience", title: "Work Experience" },
         { id: "contact-me", title: "Contact Me" },
-    ];
-    // const currentSection = useUpdateUrlOnScroll(sections);
-
+    ], []);
     const [currentSection, setCurrentSection] = useState('');
-    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,9 +56,8 @@ const Navbar = () => {
 
         window.addEventListener('scroll', handleScroll);
 
-
         return () => window.removeEventListener('scroll', handleScroll); // Cleanup
-    }, []);
+    }, [sections]);
 
     useEffect(() => {
         console.log("effect abovve ", currentSection)
