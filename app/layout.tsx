@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Vaibhav Patel | Full stack Developer",
   description: "I am a full stack developer with a passion for building modern, responsive, and user - friendly websites using the latest technologies. With expertise in Javascript, Typescript, React, Next.js, Node.js, Express, NestJS, AWS.",
   keywords: ["Vaibhav Patel", "Vaibhav", "Vaibhav Patel Portfolio", "Vaibhav", "Patel", "full stack developer", "reactjs", "nextjs", "nodejs", "express", "nestjs", "tailwind css", "portfolio", "AWS", "software engineer", "software developer"],
-  authors: { name: "Vaibhav Patel", url: "https://www.linkedin.com/in/vaibhav--patel-/" },
+  authors: { name: "Vaibhav Patel", url: "https://www.linkedin.com/in/vaibhav--patel-/", },
   alternates: {
     canonical: `https://vaibhav-patel.vercel.app/`,
   },
