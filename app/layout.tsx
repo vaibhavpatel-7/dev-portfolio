@@ -7,11 +7,45 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Vaibhav Patel | Full stack Developer",
-  description: "I am a Skilled Full stack Developer with expertise in React, Next.js, Node.js, Express, NestJS, AWS.",
+  description: "I am a full stack developer with a passion for building modern, responsive, and user - friendly websites using the latest technologies. With expertise in Javascript, Typescript, React, Next.js, Node.js, Express, NestJS, AWS.",
   keywords: ["Vaibhav Patel", "Vaibhav", "Vaibhav Patel Portfolio", "Vaibhav", "Patel", "full stack developer", "reactjs", "nextjs", "nodejs", "express", "nestjs", "tailwind css", "portfolio", "AWS", "software engineer", "software developer"],
-  authors: { name: "Vaibhav Patel", url: "https://www.linkedin.com/in/vaibhav--patel-/" }
-
+  authors: { name: "Vaibhav Patel", url: "https://www.linkedin.com/in/vaibhav--patel-/" },
+  alternates: {
+    canonical: `https://vaibhav-patel.vercel.app/`,
+  },
+  openGraph: {
+    title: "Vaibhav Patel | Full stack Developer",
+    description: "I am a full stack developer with a passion for building modern, responsive, and user-friendly websites using the latest technologies. With expertise in Javascript, Typescript, React, Next.js, Node.js, Express, NestJS, AWS.",
+    type: 'website',
+    siteName: "Portfolio",
+    url: 'https://vaibhav-patel.vercel.app/',
+    images: [
+      {
+        url: 'https://vaibhav-patel.vercel.app/og-image.png',
+        width: 800,
+        height: 600,
+        alt: 'Vaibhav Patel',
+      },
+    ],
+  }
 };
+
+const jsonLd = {
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  name: "Vaibhav Patel",
+  url: "https://vaibhav-patel.vercel.app/",
+  image: "https://vaibhav-patel.vercel.app/og-image.png",
+  sameAs: [
+    "https://www.linkedin.com/in/vaibhav--patel-/",
+    "https://www.instagram.com/vai7bhv",
+    "https://github.com/vai7bhv",
+    "https://vaibhav-patel.vercel.app/"
+  ],
+  jobTitle: "Software Engineer",
+
+
+}
 
 export default function RootLayout({
   children,
@@ -20,6 +54,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}</body>
