@@ -1,13 +1,11 @@
 "use client"
 
-import Link from 'next/link'
-import { Source_Code_Pro } from 'next/font/google'
-import Aos from "aos";
 import "aos/dist/aos.css";
 
-
+import { Source_Code_Pro } from 'next/font/google'
 import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Aos from "aos";
+import Link from 'next/link'
 
 export interface ISection {
     id: string;
@@ -18,23 +16,6 @@ const SourceCodePro = Source_Code_Pro({
     display: 'swap',
 })
 
-function getVisibleSection(sections: ISection[]) {
-    for (const section of sections) {
-        const sectionElement = document.getElementById(section.id);
-
-        if (sectionElement) {
-            const rect = sectionElement.getBoundingClientRect();
-            const top = rect.top + window.scrollY - 100;
-            const bottom = top + sectionElement.offsetHeight;
-
-            if (window.scrollY >= top && window.scrollY < bottom) {
-                return section.id;
-            }
-        }
-    }
-    return '';
-}
-
 const Navbar = () => {
     const sections = useMemo(() => [
         { id: "home", title: "Home" },
@@ -43,30 +24,43 @@ const Navbar = () => {
         { id: "work-experience", title: "Work Experience" },
         { id: "contact-me", title: "Contact Me" },
     ], []);
-    const [currentSection, setCurrentSection] = useState('');
+    const [activeSection, setActiveSection] = useState('');
+    const [isScrolled, setIsScrolled] = useState(false);
 
+    // handle scroll event
     useEffect(() => {
         const handleScroll = () => {
-            const newSection = getVisibleSection(sections);
-            console.log(newSection)
-            if (newSection)
-                setCurrentSection(newSection);
-            window.history.pushState({}, '', `#${newSection}`);
+            // header border logic: 
+            const scrollY = window.scrollY;
+            const scrollThreshold = 100;
+
+            if (scrollY > scrollThreshold && !isScrolled) {
+                setIsScrolled(true);
+            } else if (scrollY <= scrollThreshold && isScrolled) {
+                setIsScrolled(false);
+            }
+
+            // smooth scroll logic :
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    setActiveSection(section.id);
+                }
+            });
         };
 
         window.addEventListener('scroll', handleScroll);
 
-        return () => window.removeEventListener('scroll', handleScroll); // Cleanup
-    }, [sections]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
 
+    // update hash in path
     useEffect(() => {
-        console.log("effect abovve ", currentSection)
-        if (currentSection) {
-            console.log("effect below ", currentSection)
-            window.history.replaceState({}, '', `#${currentSection}`);
-        }
-    }, [currentSection])
-
+        history.replaceState(null, '', `#${activeSection}`);
+    }, [activeSection])
     useEffect(() => {
         Aos.init({
             offset: 10, // offset (in px) from the original trigger point
@@ -86,7 +80,7 @@ const Navbar = () => {
             <ul className='gap-4 text-lg hidden lg:flex tracking-widest uppercase'>
                 {
                     sections.map((section) => (
-                        <li key={section.id} className={`${currentSection === section.id ? "text-white" : "text-[#708090]"} pb-3  `}>
+                        <li key={section.id} className={`${activeSection === section.id ? "text-white" : "text-[#708090]"} pb-3  `}>
                             <Link href={`#${section.id}`} className={section.id === "" ? ' font-extrabold menu-item' : 'menu-item'}>
                                 <h1> {section.title}</h1>
                             </Link>
