@@ -20,15 +20,15 @@ import PostgresqlLogo from "../../svg/postgresql.svg"
 
 const Skills = () => {
     return (
-        <div data-aos="slide-up" className='px-6 md:pt-28 md:pl-14 md:pr-14 flex flex-col gap-11'>
+        <div className='px-6 md:pt-28 md:pl-14 md:pr-14 flex flex-col gap-11'>
             <div>
                 <h1 className='text-4xl lg:text-5xl  font-bold'>Skills 💻</h1>
             </div>
             <div className='flex flex-col lg:gap-9 gap-4'>
-                <div>
-                    <h1 className='text-3xl lg:text-4xl' >
+                <div data-aos="fade-up" data-aos-delay="100" >
+                    <h1 className='text-3xl lg:text-4xl' data-aos="fade-up" data-aos-delay="100" >
                         Frontend
-                        <div className='flex flex-wrap lg:gap-11 gap-7' >
+                        <div className='flex flex-wrap lg:gap-11 gap-7'  data-aos="fade-up" data-aos-delay="150">
                             <Skill logo={ReactLogo} title='React Js' />
                             <Skill logo={NextLogo} title='Next Js' />
                             <Skill logo={ReduxLogo} title='Redux' />
@@ -40,9 +40,9 @@ const Skills = () => {
                     </h1>
                 </div>
                 <div>
-                    <h1 className='text-3xl lg:text-4xl' >
+                    <h1 className='text-3xl lg:text-4xl' data-aos="fade-up" data-aos-delay="200">
                         Backend
-                        <div className='flex flex-wrap gap-7' >
+                        <div className='flex flex-wrap gap-7' data-aos="fade-up" data-aos-delay="250" >
                             <Skill logo={NodeLogo} title='Node Js' />
                             <Skill logo={ExpressLogo} title='Express Js' />
                             <Skill logo={NestLogo} title='Nest Js' />
@@ -52,9 +52,9 @@ const Skills = () => {
                     </h1>
                 </div>
                 <div>
-                    <h1 className='text-3xl lg:text-4xl' >
+                    <h1 className='text-3xl lg:text-4xl' data-aos="fade-up" data-aos-delay="300" >
                         Language
-                        <div className='flex flex-wrap gap-7' >
+                        <div className='flex flex-wrap gap-7' data-aos="fade-up" data-aos-delay="350" >
                             <Skill logo={JSLogo} title='Javascript' />
                             <Skill logo={TSLogo} title='Typescript' />
                             <Skill logo={RustLogo} title='Rust' />

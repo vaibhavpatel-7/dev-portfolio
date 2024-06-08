@@ -25,11 +25,11 @@ const Hero = () => {
             </div>
             <div className='flex flex-col items-center z-10 justify-center flex-1'>
                 <span className='text-2xl flex gap-3 flex-col'>
-                    <p className={SourceCodePro.className}>
+                    <p className={SourceCodePro.className} data-aos="zoom-in-up" data-aos-delay="100">
                         Hey, This is
                     </p>
 
-                    <h1 className='font-bold lg:text-9xl text-4xl z-10 tracking-wide'>
+                    <h1 className='font-bold lg:text-9xl text-4xl z-10 tracking-wide' data-aos="zoom-in-up" data-aos-delay="200">
                         VAIBHAV PATEL
                     </h1>
 
