@@ -14,6 +14,7 @@ const SourceCodePro = Source_Code_Pro({
     display: 'swap',
 })
 
+
 const About = () => {
     return (
         <div data-aos="fade-in" className='mt-40 md:mt-0 flex flex-1 items-center flex-col md:flex-row min-h-screen w-full md:justify-evenly'>
