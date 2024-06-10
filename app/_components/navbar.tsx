@@ -71,9 +71,9 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className='h-24 flex flex-row items-center inset-x-0 top-0 bg-black/50 border-slate-800 border-dashed justify-between w-full xl:px-16 py-5 sticky z-40 backdrop-blur-sm border-b-slate-700 placeholder: border-b-0'>
+        <nav className='h-14 md:h-24 flex flex-row items-center inset-x-0 top-0 bg-black/50 border-slate-800 border-dashed justify-between w-full xl:px-16 py-5 sticky z-40 backdrop-blur-sm border-b-slate-700 placeholder: border-b-0'>
             <Link href="#home">
-                <span className={` sm:ml-4  flex font-semibold  text-2xl ${SourceCodePro.className}`}>{"<Vaibhav Patel./>"}</span>
+                <span className={`ml-4 md:ml-2 flex font-semibold text-2xl ${SourceCodePro.className}`}>{"<Vaibhav Patel./>"}</span>
             </Link>
 
             {/* Menu options */}

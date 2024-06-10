@@ -29,12 +29,12 @@ const Hero = () => {
                         Hey, This is
                     </p>
 
-                    <h1 className='font-bold lg:text-9xl text-4xl z-10 tracking-wide' data-aos="zoom-in-up" data-aos-delay="200">
+                    <h1 className='font-bold lg:text-9xl text-5xl z-10 tracking-wide' data-aos="zoom-in-up" data-aos-delay="200">
                         VAIBHAV PATEL
                     </h1>
 
-                    <span className='flex gap-4 place-items-start text-4xl'>
-                        <div className='text_animation '>
+                    <span className='flex gap-4 place-items-start text-2xl md:text-4xl'  data-aos="zoom-in-up" data-aos-delay="250">
+                        <div className='text_animation'>
                             <ul className='list_animation'>
                                 <li>a Full Stack Developer</li>
                                 <li>a Tech Enthusiast</li>

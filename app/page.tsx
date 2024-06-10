@@ -1,11 +1,10 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Navbar from "./_components/navbar";
 import Hero from "./_components/hero";
 import About from "./_components/about";
 import Skills from "./_components/skills";
-import WorkExprience from "./_components/work-exprience";
+import WorkExperience from "./_components/experience";
 import Contact from './_components/contact';
 import Certificate from './_components/certificate';
 
@@ -38,8 +37,8 @@ export default function Home() {
       <section id="skills" className="min-h-dvh">
         <Skills />
       </section>
-      <section id="work-experience" className="min-h-dvh flex flex-col">
-        <WorkExprience />
+      <section id="work-experience" className="min-h-dvh flex flex-col my-5">
+        <WorkExperience />
       </section>
       <section id="certificate" className="min-h-32">
         <Certificate />

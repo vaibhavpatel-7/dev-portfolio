@@ -1,12 +1,12 @@
 import React from 'react'
 import { StaticImageData } from 'next/image'
 
-import ExprienceCard from './ui/exprience-card'
+import ExperienceCard from './ui/experience'
 import THLogo from "../../svg/th.svg"
 import LegendsLogo from "../../svg/legends.jpeg"
 import AmexLogo from "../../svg/amex.png"
 
-export interface IExprienceData {
+export interface IExperienceData {
     companyName: string;
     location: string;
     position: string;
@@ -21,8 +21,8 @@ export interface IExprienceData {
     }[]
 }
 
-const WorkExprience = () => {
-    const exprienceData: IExprienceData[] = [
+const WorkExperience = () => {
+    const experienceData: IExperienceData[] = [
         {
             companyName: "Tech Holding",
             location: "Ahmedabad,India",
@@ -30,12 +30,16 @@ const WorkExprience = () => {
             duration: "Jan 2023 - Present",
             logo: THLogo,
             description: ["Developing features of software application using my frontend and backend development skills.",
-                "Developed Resposive user interface",
-                "Developing features of software application using my frontend and backend development skills.",
-                "Developing features of software application using my frontend and backend development skills.",
+                "Developing Responsive user interface",
+                'Working closely with clients for project development. Managing the software development lifecycle.',
+                'Testing and fixing bugs.',
+                'Applying best practices and standards to optimize codebase.',
+                'Communicating with other team members to deliver successful projects.',
+                'Developing and executing project plans.',
+                'Exploring new Technologies or frameworks as per need of projects.',
 
             ],
-            technologies: ["React", "Next", "Tailwind", "Redux", "Node", "Express", "AWS", "Postgres", "Nest"],
+            technologies: ["Javascript","Typescript","React", "Next","Node", "Express", "AWS", "Tailwind", "Redux", "Postgres", "Nest"],
             client: [
                 {
                     logo: AmexLogo,
@@ -52,14 +56,14 @@ const WorkExprience = () => {
     ]
 
     return (
-        <div className='mt-28 ml-12'>
+        <div className='mt-28 md:mx-12 mx-7'>
             <h1 className='text-4xl font-bold mb-16 md:text-5xl'>
-                👨🏻‍💻 Work Exprience
+                👨🏻‍💻 Work Experience
             </h1>
             <div className='flex flex-1 flex-col gap-12'>
                 {
-                    exprienceData.map((data, index) => (
-                        <ExprienceCard key={index} data={data} index={index} />
+                    experienceData.map((data, index) => (
+                        <ExperienceCard key={index} data={data} index={index} />
                     ))
                 }
             </div>
@@ -68,4 +72,4 @@ const WorkExprience = () => {
 
 }
 
-export default WorkExprience
+export default WorkExperience
