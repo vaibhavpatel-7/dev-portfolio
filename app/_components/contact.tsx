@@ -34,7 +34,7 @@ const Contact = () => {
         },
         {
             title: "Resume",
-            link: process.env.NEXT_PUBLIC__RESUME_URL || "",
+            link: process.env.NEXT_PUBLIC_RESUME_URL || "",
             icon: ResumeLogo,
         }
     ]
