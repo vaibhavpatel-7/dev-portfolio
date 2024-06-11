@@ -16,7 +16,6 @@ interface IContactDetails {
 
 const Contact = () => {
 
-    console.log("resume",process.env.NEXT_PUBLIC__RESUME_URL)
     const contactDetails: IContactDetails[] = [
         {
             title: "vaibhavp2955@gmail.com",
