@@ -38,13 +38,10 @@ const jsonLd = {
   image: "https://vaibhav-patel.vercel.app/og-image.png",
   sameAs: [
     "https://www.linkedin.com/in/vaibhav--patel-/",
-    "https://www.instagram.com/vai7bhv",
-    "https://github.com/vai7bhv",
+    "https://github.com/vaibhavpatel-7",
     "https://vaibhav-patel.vercel.app/"
   ],
   jobTitle: "Software Engineer",
-
-
 }
 
 export default function RootLayout({
