@@ -21,8 +21,8 @@ const Navbar = () => {
         { id: "home", title: "Home" },
         { id: "about", title: "About" },
         { id: "skills", title: "Skills" },
-        { id: "work-experience", title: "Work Experience" },
-        { id: "contact-me", title: "Contact Me" },
+        { id: "work-experience", title: "Experience" },
+        { id: "contact-me", title: "Contact" },
     ], []);
     const [activeSection, setActiveSection] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
